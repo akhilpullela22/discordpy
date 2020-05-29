@@ -38,9 +38,10 @@ class MyClient(discord.Client):
                 await message.channel.send('```Day ' + str(days) + '```')
                 days += 1
                 selected_pic = pics[i]
-                i += 1
+
                 await message.channel.send(selected_pic)
-                pics.remove(selected_pic)
+                i += 1
+
                 if days == 34:
                     await message.channel.send('akhil, you pabo, we are on day 35 you need to add more images!')
                     break
