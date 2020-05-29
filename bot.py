@@ -44,7 +44,7 @@ class MyClient(discord.Client):
                     await message.channel.send('@Akhil, the images are done, need to add more')
                     break
 
-                await asyncio.sleep(1)
+                await asyncio.sleep(86400)
 
 
 
