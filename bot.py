@@ -14,6 +14,7 @@ class MyClient(discord.Client):
     async def on_message(self, message):
         if message.content == 'daily-mina':
             days = 18
+            i = 0
             channel = client.get_channel(713149370421477490)
             pics = [
                 'https://cdn.discordapp.com/attachments/138194552837111808/715316841370878093/18f93d0d731738a77d9d00a6276110bd.png',
@@ -34,16 +35,15 @@ class MyClient(discord.Client):
                 'https://pbs.twimg.com/media/EYY7OJLVcAAqT4D.jpg:orig'
                 'https://gfycat.com/fancyimaginarybuzzard']
             while True:
-                i = random.randint(0, len(pics)-1)
                 await message.channel.send('```Day ' + str(days) + '```')
                 days += 1
                 selected_pic = pics[i]
+                i += 1
                 await message.channel.send(selected_pic)
                 pics.remove(selected_pic)
-                if len(pics) == 0:
-                    await message.channel.send('@Akhil, the images are done, need to add more')
+                if days == 34:
+                    await message.channel.send('akhil, you pabo, we are on day 35 you need to add more images!')
                     break
-
                 await asyncio.sleep(86400)
 
 
