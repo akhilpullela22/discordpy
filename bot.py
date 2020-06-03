@@ -3,7 +3,7 @@ import random
 import datetime
 import os
 import asyncio
-from periodic import Periodic
+
 
 
 class MyClient(discord.Client):
