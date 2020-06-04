@@ -12,6 +12,10 @@ class MyClient(discord.Client):
         print(discord.__version__)
 
     async def on_message(self, message):
+        if  message.content == 'cleanse':
+            channel = client.get_channel
+            await message.channel.purge(limit=150)
+            await message.channel.send('this channel has been cleansed')
         if message.content == 'daily-mina':
             days = 18
             i = 0
