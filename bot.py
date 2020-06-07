@@ -55,17 +55,19 @@ class MyClient(discord.Client):
                 source = requests.get(url).text
                 soup = BeautifulSoup(source, 'lxml')
                 word = soup.find('div', class_= 'r101-wotd-widget__word' ).text
+                romanization = soup.find('div', class_= 'r101-wotd-widget__additional-field romanization' ).text
                 translator = Translator()
                 translation1 = translator.translate(word, dest = 'te').text 
                 translation2 = translator.translate(word, dest = 'en').text
                 await message.channel.send('KOREAN WORD OF THE DAY:')
-                await message.channel.send('            ' + word + '            ')
+                await message.channel.send(word + ': ' +romanization)
                 await message.channel.send('English TRANSLATION: '+translation2)
                 await message.channel.send('Telugu TRANSLATION: ' +translation1)    
                 await asyncio.sleep(86400)        
 
 
         
+      
 
 
 client = MyClient()
