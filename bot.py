@@ -27,10 +27,5 @@ for filename in os.listdir('./Cogs'):
       
 
 
-<<<<<<< HEAD
 
 bot.run(Token)
-=======
-client = MyClient()
-client.run(token)
->>>>>>> bab0b2a548dcbd7680f3dbe2461a4f8a83be3e04
