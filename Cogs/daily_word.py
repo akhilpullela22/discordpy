@@ -17,7 +17,7 @@ class daily_word(commands.Cog):
     async def on_ready(self):
         print('Data: Online')
     @commands.command (aliases=['word'])
-    async def word (self, ctx):
+    async def d_word (self, ctx):
             url = 'https://www.koreanclass101.com/korean-phrases/'
             while True:
                 source = requests.get(url).text
