@@ -18,7 +18,6 @@ async def on_ready():
     print('Status: Online') 
     activity = discord.Activity(name = 'TWICE', type = discord.ActivityType.listening)
     return await bot.change_presence(activity = activity)
-    
 
 for filename in os.listdir('./Cogs'):
     if filename.endswith('.py'):

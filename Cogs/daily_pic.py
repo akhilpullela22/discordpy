@@ -15,7 +15,7 @@ class daily_pic(commands.Cog):
 
     @commands.command(aliases = ['daily_pic'])
     async def daily_mina(self, ctx):
-            days = 49
+            days = 50
             i = 0
             
             pics = [
@@ -40,7 +40,7 @@ class daily_pic(commands.Cog):
                 await ctx.channel.send(selected_pic)
                 i += 1
 
-                if days == 62:
+                if days == 63:
                     break
                 await asyncio.sleep(86400)
 def setup(bot):
