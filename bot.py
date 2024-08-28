@@ -8,7 +8,7 @@ from googletrans import Translator
 import requests
 from discord.ext import commands
 
-Token = 'NTA0MzUwMTc2NjMxMDYyNTI5.XvbdkA.rK2Uo0v_bwcgvswFrQQBq-NGy0E'
+Token = 'token'
 
 bot = commands.Bot(command_prefix = '.')
 bot.remove_command('help')
