@@ -36,6 +36,7 @@ class MyClient(discord.Client):
                 embed = discord.Embed(title = 'Team ' + number, color = discord.Colour(0x0000FF),)
                 embed.add_field(name="🏫 School Name", value=json_parsed["school_name"], inline=False)
                 embed.add_field(name="📍 Location", value=f"{json_parsed['city']}, {json_parsed['state_prov']}, {json_parsed['country']}", inline=False)
+                embed.add_field(name="🏅 Established", value=str(json_parsed["rookie_year"]), inline=False)
                 await message.channel.send(embed=embed)
             except ValueError:
                 await message.channel.send("Invalid Team Number")
